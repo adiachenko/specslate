@@ -31,7 +31,7 @@ Use these skills in order:
 > Examples use Codex syntax with `$skill`. In Claude Code, use the same input but replace `$spec-discover`, `$spec-explore`, and `$spec-fortify` with `/spec-discover`, `/spec-explore`, and `/spec-fortify` respectively.
 
 1. `spec-discover`
-   Use to create the first version of a spec from a project idea.
+   Use to create the first version of a spec from a project idea under `specs.local/`.
 
    Example:
 
@@ -40,8 +40,8 @@ Use these skills in order:
    ```
 
    After saving the spec, it will also automatically configure local ignore rules 
-   for `specs.local` so specs stay out of git while remaining available to Codex
-   `@` file references.
+   for `specs.local/` so specs stay out of git by default while remaining available
+   to Codex `@` file references.
 
 2. `spec-explore`
    Use to work through a single open decision in an existing spec.
