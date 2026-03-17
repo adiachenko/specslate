@@ -1,0 +1,66 @@
+---
+name: spec-discover
+description: Create a lightweight project spec by identifying the decisions that must be made before implementation, without resolving them. Use as the first step in the spec-driven workflow to produce the initial spec for later exploration and fortification.
+---
+
+# Spec Discover
+
+Use this skill for the discovery phase of the spec-driven workflow.
+
+## Instructions
+
+You are scoping a project spec. Your job is to identify the distinct decisions
+that need to be made, not to make them.
+
+The user will describe what they want to build after referencing this skill.
+From their description, produce a spec file and save it to disk.
+
+## File Convention
+
+Save as: `specs.local/NNN_<topic-slug>.md` relative to the project root, where
+NNN is the next available zero-padded index (`001`, `002`, `003`, etc.).
+
+After saving the spec file, if the working directory is a Git repository,
+configure local ignore rules for `specs.local` if not already configured:
+
+- add `specs.local/` to `.git/info/exclude` so local specs are not committed
+- add `!specs.local/` to `.ignore` so Codex can still reference those files with `@`
+- add `.ignore` to `.git/info/exclude` if the file only contains the line above
+
+## Spec File Format
+
+```md
+# Spec: <Short Title>
+
+## Summary
+
+<What we're building>
+
+## Constraints
+
+<Non-negotiable requirements extracted from user prompt and context>
+
+## Decisions
+
+| ID  | Decision | ✅  |
+| --- | -------- | --- |
+| D01 | <title>  |     |
+| D02 | <title>  |     |
+
+---
+
+## D01: <Title>
+
+<What needs answering before we can build this part>
+
+## D02: <Title>
+
+...
+```
+
+## Rules
+
+- If there's no real tradeoff, it's a constraint, not a decision.
+- Foundational decisions first. Call out dependencies in context paragraphs.
+- Name likely options to frame the tradeoff, but do not recommend or commit to
+  one.
