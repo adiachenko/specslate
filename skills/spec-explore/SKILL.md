@@ -20,9 +20,8 @@ This is a deep exploration, not a forced choice. Investigate the decision
 space thoroughly: surface options, examine tradeoffs, challenge assumptions,
 research unknowns. Follow wherever the conversation leads.
 
-A decision may take multiple sessions to reach its final form. At the end of
-each session, write your findings into the decision section of the spec file so
-the next session can pick up where this one left off.
+A decision may take multiple sessions to reach its final form. Keep the spec
+current as you go — see **Updating the Spec** below.
 
 ## Decision Scrutiny Protocol
 
