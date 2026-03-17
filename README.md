@@ -1,10 +1,10 @@
-# 📘 Specslate
+# Specslate
 
 > This workflow is **work in progress**.
 
 Skills for a lightweight spec-driven workflow to draft, refine, and strengthen the spec for a project or feature.
 
-## 🤔 Why This Workflow
+## 🤔 Why Use It
 
 ### Compared to Planning Mode
 
@@ -14,7 +14,7 @@ Instead, this workflow produces a document that first only maps out open questio
 
 ### Compared to Other Spec-Driven Workflows
 
-Dedicated spec workflows typically add structure through templates, required fields, and multi-stage review gates. In practice, that rigidity works against you: it constrains the exploration to what the workflow anticipated, produces boilerplate where real thinking should be, and makes the process feel like filling out forms. This workflow uses plain Markdown and a small set of focused skills, so the structure serves the thinking rather than replacing it.
+Dedicated spec workflows typically add structure through templates, required fields, and multi-stage review gates. In practice, that rigidity works against you: it constrains the exploration to what the workflow anticipated, produces boilerplate where real thinking should be, and makes the process feel like filling out forms. This workflow strips it down to a single Markdown file and 3 helper prompts — just enough structure to serve the thinking, not replace it.
 
 It aims to stay as thin as possible. Expect it to get simpler over time, not more complex.
 
@@ -33,18 +33,18 @@ Use these skills in order:
 1. `spec-discover`
    Use to create the first version of a spec from a project idea.
 
-   After saving the spec, it should offer to configure local ignore rules for
-   `specs.local` so specs stay out of git while remaining available to Codex
-   `@` file references.
-
    Example:
 
    ```text
    $spec-discover Build an MCP server for calendar management.
    ```
 
+   After saving the spec, it will also automatically configure local ignore rules 
+   for `specs.local` so specs stay out of git while remaining available to Codex
+   `@` file references.
+
 2. `spec-explore`
-   Use to work through one open decision in an existing spec.
+   Use to work through a single open decision in an existing spec.
 
    Example:
 
@@ -53,7 +53,7 @@ Use these skills in order:
    ```
 
 3. `spec-fortify`
-   Use to check the spec after the main decisions have been explored.
+   Use to review the spec after the main decisions have been explored.
 
    Example:
 
