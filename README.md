@@ -21,7 +21,7 @@ It aims to stay as thin as possible. Expect it to get simpler over time, not mor
 ## 🛠️ Installation
 
 ```bash
-npx skills add adiachenko/spec-driven-workflow
+npx skills add adiachenko/specslate
 ```
 
 ## 🚀 Usage
