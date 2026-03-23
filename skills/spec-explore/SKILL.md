@@ -20,6 +20,22 @@ This is a deep exploration, not a forced choice. Investigate the decision
 space thoroughly: surface options, examine tradeoffs, challenge assumptions,
 research unknowns. Follow wherever the conversation leads.
 
+A decision may take multiple sessions to reach its final form. Treat the user
+as an active collaborator in the exploration, not as someone you silently
+decide for. Do not turn the spec into an implicit recommendation log while the
+decision is still open.
+
+Drive the exploration in the open. Present the current option space to the
+user, explain the important tradeoffs in concrete terms, identify what is
+still unknown, and use that to move the discussion forward. Do not reduce the
+interaction to a hidden analysis followed by a recommendation, and do not
+reduce it to an interview that only asks the user questions without helping
+structure the decision.
+
+When helpful, summarize the main options on the table, explain what each one
+buys and costs, point out which assumptions or open questions separate them,
+and ask targeted follow-up questions that help narrow or deepen the
+exploration.
 A decision may take multiple sessions to reach its final form. Keep the spec
 current as you go — see **Updating the Spec** below.
 
@@ -85,6 +101,22 @@ As the exploration progresses, update the decision section in the spec file
 whenever the user makes a call on something: a direction chosen, an option
 ruled out, a constraint discovered. Keep it current so the next session can
 pick up where this one left off.
+
+Do not infer that a session has "ended" and then write a speculative summary.
+The trigger for updating the spec is progress in the exploration that the user
+has actually made or confirmed, not the agent's guess that the conversation is
+wrapping up.
+
+Before a decision is settled, record only unresolved exploration state:
+options discussed, tradeoffs examined, assumptions the user wants to keep in
+play, factual constraints verified from the spec/codebase/research, open
+questions, and decisions or eliminations the user explicitly made. Avoid
+wording that implies an unresolved direction has been chosen unless the user
+explicitly endorsed it.
+
+If you believe the exploration has produced enough evidence to resolve the
+decision, say so explicitly to the user and ask whether to resolve it now or
+continue exploring. Do not mark the decision settled without that confirmation.
 
 When the user considers the decision settled, mark it ✅ in the table and make
 sure the decision section reflects the final resolution clearly enough for the

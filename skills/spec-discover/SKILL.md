@@ -60,7 +60,11 @@ configure local ignore rules for `specs.local` if not already configured:
 
 ## Rules
 
-- If there's no real tradeoff, it's a constraint, not a decision.
+- If there is no real tradeoff and the requirement is explicit and non-negotiable, it is a constraint.
+- If a detail could plausibly be implemented in more than one valid way, it is a decision.
+- Suggested contracts, examples, and likely designs should be preserved as decision input when they inform an unresolved choice.
+- Do not infer additional hard requirements from examples or suggested contracts beyond what is directly stated.
+- Prefer narrower constraints plus broader decisions. Preserve ambiguity instead of resolving it, and preserve user-provided detail inside the relevant decision.
 - Foundational decisions first. Call out dependencies in context paragraphs.
-- Name likely options to frame the tradeoff, but do not recommend or commit to
-  one.
+- Name likely options to frame the tradeoff, but do not recommend or commit to one.
+- Before finalizing, audit each constraint: if it depends on interpretation rather than direct user intent, move it to `Decisions` and keep the motivating detail if it remains relevant.
