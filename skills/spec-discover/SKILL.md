@@ -17,14 +17,18 @@ From their description, produce a spec file and save it to disk.
 
 ## File Convention
 
-Save as: `specs.local/NNN_<topic-slug>.md` relative to the project root, where
-NNN is the next available zero-padded index (`001`, `002`, `003`, etc.).
+Save as: `.specslate/YYMMDD_<topic_slug>.md` relative to the project root, where
+`YYMMDD` is the current local date and `<topic_slug>` is a snake_case slug derived
+from the topic.
+
+Examples:
+`.specslate/260323_calendar_mcp.md`
 
 After saving the spec file, if the working directory is a Git repository,
-configure local ignore rules for `specs.local` if not already configured:
+configure local ignore rules for `.specslate/` if not already configured:
 
-- add `specs.local/` to `.git/info/exclude` so local specs are not committed
-- add `!specs.local/` to `.ignore` so Codex can still reference those files with `@`
+- add `.specslate/` to `.git/info/exclude` so local specs are not committed
+- add `!.specslate/` to `.ignore` so Codex can still reference those files with `@`
 - add `.ignore` to `.git/info/exclude` if the file only contains the line above
 
 ## Spec File Format
