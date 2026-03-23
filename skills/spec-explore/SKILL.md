@@ -102,6 +102,11 @@ whenever the user makes a call on something: a direction chosen, an option
 ruled out, a constraint discovered. Keep it current so the next session can
 pick up where this one left off.
 
+Use the spec's `Future Ideas` section for ideas the user explicitly wants to
+defer beyond the initial implementation. That section is for "not now, but
+don't forget this" items. It is not a substitute for unresolved decisions that
+still need to be answered before implementation can start safely.
+
 Do not infer that a session has "ended" and then write a speculative summary.
 The trigger for updating the spec is progress in the exploration that the user
 has actually made or confirmed, not the agent's guess that the conversation is
@@ -121,3 +126,10 @@ continue exploring. Do not mark the decision settled without that confirmation.
 When the user considers the decision settled, mark it ✅ in the table and make
 sure the decision section reflects the final resolution clearly enough for the
 next session to treat it as a constraint.
+
+Once a decision is settled, keep that decision section focused on the resolved
+contract and constraints only. Do not leave "deferred follow-up" or other
+unresolved exploration notes inside the resolved decision section. Instead,
+move each remaining open thread to the unresolved decision that owns it, create
+a new unresolved decision if no owner exists yet, or move it to `Future Ideas`
+if the user explicitly decided it belongs after the first implementation.

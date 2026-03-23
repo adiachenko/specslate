@@ -49,3 +49,4 @@ Actionable changes include:
 - adding a new pending decision
 - reopening a resolved decision
 - adding or clarifying a constraint
+- moving explicitly deferred nice-to-haves into `Future Ideas`

@@ -12,6 +12,11 @@ Built-in planning modes in Codex and Claude Code follow a single-shot pattern: d
 
 Instead, this workflow produces a document that first only maps out open questions and constraints. You then resolve each question **one at a time across separate sessions**, using the file as a persistent state machine for the process. Each decision can be explored as deeply as it deserves before it all comes together in the final comprehensive plan.
 
+When something is intentionally out of scope for the initial implementation but
+worth remembering, record it in the spec's `Future Ideas` section instead of
+smuggling it into resolved decisions or leaving it as an implicit "maybe later"
+note.
+
 ### Compared to Other Spec-Driven Workflows
 
 Dedicated spec workflows typically add structure through templates, required fields, and multi-stage review gates. In practice, that rigidity works against you: it constrains the exploration to what the workflow anticipated, produces boilerplate where real thinking should be, and makes the process feel like filling out forms. This workflow strips it down to a single Markdown file and 3 helper prompts — just enough structure to serve the thinking, not replace it.

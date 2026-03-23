@@ -49,6 +49,12 @@ configure local ignore rules for `specs.local` if not already configured:
 
 ---
 
+## Future Ideas
+
+- <Explicitly deferred idea that is out of scope for the first implementation>
+
+---
+
 ## D01: <Title>
 
 <What needs answering before we can build this part>
@@ -62,9 +68,11 @@ configure local ignore rules for `specs.local` if not already configured:
 
 - If there is no real tradeoff and the requirement is explicit and non-negotiable, it is a constraint.
 - If a detail could plausibly be implemented in more than one valid way, it is a decision.
+- If something is intentionally out of scope for the first implementation but worth remembering, put it in `Future Ideas`, not in `Constraints`.
 - Suggested contracts, examples, and likely designs should be preserved as decision input when they inform an unresolved choice.
 - Do not infer additional hard requirements from examples or suggested contracts beyond what is directly stated.
 - Prefer narrower constraints plus broader decisions. Preserve ambiguity instead of resolving it, and preserve user-provided detail inside the relevant decision.
 - Foundational decisions first. Call out dependencies in context paragraphs.
 - Name likely options to frame the tradeoff, but do not recommend or commit to one.
+- Keep `Future Ideas` lightweight. It is a parking lot for explicit deferments, not a second backlog of unresolved requirements.
 - Before finalizing, audit each constraint: if it depends on interpretation rather than direct user intent, move it to `Decisions` and keep the motivating detail if it remains relevant.
