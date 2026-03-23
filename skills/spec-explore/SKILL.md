@@ -123,6 +123,16 @@ If you believe the exploration has produced enough evidence to resolve the
 decision, say so explicitly to the user and ask whether to resolve it now or
 continue exploring. Do not mark the decision settled without that confirmation.
 
+Interdependent decisions are normal. Do not block resolution of the current
+decision merely because a future or adjacent decision may extend, refine, or
+constrain it later. First ask whether the current decision can define a stable
+contract, boundary, default, or invariant that remains valid across the
+plausible outcomes of the other decision. If yes, resolve the current decision
+now and record the dependency explicitly. Only treat another decision as
+blocking when different outcomes there would materially change the core
+contract being settled here, rather than adding optional detail or a later
+extension point.
+
 When the user considers the decision settled, mark it ✅ in the table and make
 sure the decision section reflects the final resolution clearly enough for the
 next session to treat it as a constraint.
