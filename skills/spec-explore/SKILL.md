@@ -124,6 +124,14 @@ If you believe the exploration has produced enough evidence to resolve the
 decision, say so explicitly to the user and ask whether to resolve it now or
 continue exploring. Do not mark the decision settled without that confirmation.
 
+Before marking a decision resolved, do a quick omissions check: compare the
+resolved section against the conversation and make sure anything the user
+settled that materially affects the contract is reflected in the spec.
+
+When the user approves exact contract wording or structure, record it verbatim
+in the resolved spec. Do not paraphrase, summarize, normalize, or omit any
+part of it unless the user explicitly asks for a rewrite.
+
 Interdependent decisions are normal. Do not block resolution of the current
 decision merely because a future or adjacent decision may extend, refine, or
 constrain it later. First ask whether the current decision can define a stable
