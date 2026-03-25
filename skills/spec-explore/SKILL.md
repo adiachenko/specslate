@@ -104,8 +104,9 @@ pick up where this one left off.
 
 Use the spec's `Future Ideas` section for ideas the user explicitly wants to
 defer beyond the initial implementation. That section is for "not now, but
-don't forget this" items. It is not a substitute for unresolved decisions that
-still need to be answered before implementation can start safely.
+don't forget this" items that are explicitly out of scope for the initial
+implementation. It is not a substitute for unresolved decisions that still
+need to be answered before implementation can start safely.
 
 Do not infer that a session has "ended" and then write a speculative summary.
 The trigger for updating the spec is progress in the exploration that the user

@@ -55,6 +55,8 @@ configure local ignore rules for `.specslate/` if not already configured:
 
 ## Future Ideas
 
+Items in this section are explicitly out of scope for the first implementation.
+
 - <Explicitly deferred idea that is out of scope for the first implementation>
 
 ---
@@ -78,5 +80,5 @@ configure local ignore rules for `.specslate/` if not already configured:
 - Prefer narrower constraints plus broader decisions. Preserve ambiguity instead of resolving it, and preserve user-provided detail inside the relevant decision.
 - Foundational decisions first. Call out dependencies in context paragraphs.
 - Name likely options to frame the tradeoff, but do not recommend or commit to one.
-- Keep `Future Ideas` lightweight. It is a parking lot for explicit deferments, not a second backlog of unresolved requirements.
+- Keep `Future Ideas` lightweight. It is a parking lot for explicit deferments that are out of scope for the first implementation, not a second backlog of unresolved requirements.
 - Before finalizing, audit each constraint: if it depends on interpretation rather than direct user intent, move it to `Decisions` and keep the motivating detail if it remains relevant.
