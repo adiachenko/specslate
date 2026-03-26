@@ -55,8 +55,6 @@ Use these skills in order:
    $spec-discover Build an MCP server for calendar management.
    ```
 
-   After saving the spec, it will also automatically configure local ignore rules for `.specslate/` so specs stay out of git by default while remaining available to Codex `@` file references.
-
 2. `spec-explore`
    Use to work through a single open decision in an existing spec.
 

@@ -24,13 +24,6 @@ from the topic.
 Examples:
 `.specslate/260323_calendar_mcp.md`
 
-After saving the spec file, if the working directory is a Git repository,
-configure local ignore rules for `.specslate/` if not already configured:
-
-- add `.specslate/` to `.git/info/exclude` so local specs are not committed
-- add `!.specslate/` to `.ignore` so Codex can still reference those files with `@`
-- add `.ignore` to `.git/info/exclude` if the file only contains the line above
-
 ## Spec File Format
 
 ```md
