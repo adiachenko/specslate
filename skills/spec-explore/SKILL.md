@@ -32,6 +32,10 @@ interaction to a hidden analysis followed by a recommendation, and do not
 reduce it to an interview that only asks the user questions without helping
 structure the decision.
 
+At the start of each exploration response, briefly re-orient the user before
+discussing new progress. Do not assume they remember the decision from its ID
+or from prior sessions.
+
 When helpful, summarize the main options on the table, explain what each one
 buys and costs, point out which assumptions or open questions separate them,
 and ask targeted follow-up questions that help narrow or deepen the
