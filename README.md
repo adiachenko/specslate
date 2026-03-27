@@ -40,14 +40,21 @@ One common failure mode is that the agent may not proactively move the workflow 
 npx skills add adiachenko/specslate
 ```
 
+## 🔄 Updating
+
+To update the installed skill package:
+
+```bash
+npx skills update -g
+```
+
 ## 🚀 Usage
 
 Use these skills in order:
 
 > Examples use Codex syntax with `$skill`. In Claude Code, replace `$` with `/`.
 
-1. `spec-discover`
-   Use to create the first version of a spec from a project idea under `.specslate/` using the `YYMMDD_<topic_slug>.md` naming pattern.
+1. Use `spec-discover` to create the draft of a spec from a project idea under `.specslate/`
 
    Example:
 
@@ -55,8 +62,7 @@ Use these skills in order:
    $spec-discover Build an MCP server for calendar management.
    ```
 
-2. `spec-explore`
-   Use to work through a single open decision in an existing spec.
+2. Use `spec-explore` to work through a single open decision in a drafted spec.
 
    Example:
 
@@ -64,11 +70,12 @@ Use these skills in order:
    $spec-explore D04 in @.specslate/260323_calendar_mcp.md
    ```
 
-3. `spec-fortify`
-   Use to review the spec after the main decisions have been explored.
+3. Use `spec-fortify` to review the spec after the main decisions have been explored.
 
    Example:
 
    ```text
    $spec-fortify @.specslate/260323_calendar_mcp.md
    ```
+
+4. When necessary, use `spec-explore` again to work through decisions added or re-opened by `spec-fortify`.
