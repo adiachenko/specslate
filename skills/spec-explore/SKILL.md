@@ -132,6 +132,20 @@ Before marking a decision resolved, do a quick omissions check: compare the
 resolved section against the conversation and make sure anything the user
 settled that materially affects the contract is reflected in the spec.
 
+Before marking a decision resolved, make sure the spec captures the assumptions
+that make the decision safe, not just the chosen shape. If the user is
+accepting a limitation rather than solving it, record that explicitly so
+fortify does not have to rediscover it as missing state.
+
+At minimum, capture any material:
+
+- trust boundary
+- ownership boundary
+- operational boundary or supported capacity envelope
+- accepted risk or deliberate non-goal
+- dependency on another decision whose future outcomes must not invalidate this
+  one
+
 When the user approves exact contract wording or structure, record it verbatim
 in the resolved spec. Do not paraphrase, summarize, normalize, or omit any
 part of it unless the user explicitly asks for a rewrite.
@@ -146,9 +160,10 @@ blocking when different outcomes there would materially change the core
 contract being settled here, rather than adding optional detail or a later
 extension point.
 
-When the user considers the decision settled, mark it ✅ in the table and make
-sure the decision section reflects the final resolution clearly enough for the
-next session to treat it as a constraint.
+When the user considers the decision settled, mark it ✅ in the table only once
+the section reflects the final resolution clearly enough for the next session
+to treat it as a constraint, including the assumptions and boundaries that keep
+the resolution safe.
 
 Once a decision is settled, keep that decision section focused on the resolved
 contract and constraints only. Do not leave "deferred follow-up" or other

@@ -64,6 +64,10 @@ Use these skills in order:
 
 2. Use `spec-explore` to work through a single open decision in a drafted spec.
 
+   As a decision settles, record not just the chosen direction but also the
+   assumptions, accepted risks, dependencies, and trust / ownership /
+   operational boundaries that make it safe.
+
    Example:
 
    ```text
@@ -71,6 +75,10 @@ Use these skills in order:
    ```
 
 3. Use `spec-fortify` to review the spec after the main decisions have been explored.
+
+   `spec-fortify` is an integration pass, not an adversarial search for more
+   work. It should prefer clarifying constraints or assumptions over reopening
+   decisions, and it may validly conclude that no changes are needed.
 
    Example:
 
