@@ -78,6 +78,8 @@ after all other sections including individual decision details. Use this
 format:
 
 ```md
+---
+
 ## Implementation Plan
 
 - [ ] **Step 1: <Title>**
