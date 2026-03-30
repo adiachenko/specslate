@@ -13,27 +13,6 @@ You are reviewing a project spec after its decisions have been resolved.
 
 The user will reference a spec file. Read it in full.
 
-This skill may also be used in two indirect ways:
-
-- to draft a focused prompt for a model outside the current tool or session to
-  review the spec through a specific lens
-- to evaluate and integrate feedback produced by a model outside the current
-  tool or session back into the fortification pass
-
-Common user-facing cues for this path include:
-`outside review`, `second opinion review`, `external review`,
-`cross-tool review`, `outside model`, `second opinion model`,
-`external model`, and `cross-tool model`. These are examples, not exclusive
-trigger phrases.
-
-When drafting such a prompt, prefer telling the user to attach or paste the
-spec itself for the other model. Include any additional context explicitly, and
-do not assume the other model can see the current conversation, files, or tool
-state unless the user plans to pass them along.
-
-Cross-tool review is optional. It is a probe, not a replacement for
-fortification.
-
 ## Fortification Posture
 
 Fortification is an integration pass, not an adversarial hunt for more work.
@@ -63,6 +42,21 @@ Do not reopen a decision merely because:
 - the system has a deliberate version-one limitation or non-goal
 - a concern can be handled by making an implicit assumption explicit
 - you can imagine a cleaner future extension
+
+This skill can also help with cross-tool review. If the user asks for a prompt
+for another model, treat that as a request for a second-opinion review, not as
+delegated fortification. Preserve the user's actual request and stated review
+lens. Do not smuggle this skill's decision-management rules or fortification
+workflow into the external prompt. Add only the minimum extra context,
+constraints, and likely hotspots needed to make the question answerable well.
+Unless the user explicitly asks for a rubric or strict structure, do not
+overprescribe the response format. Do not ask the other model to fortify the
+spec, manage decision state, or decide whether decisions should be added,
+reopened, or resolved. Prefer telling the user to attach or paste the spec for
+that model, include any additional context explicitly, and do not assume the
+other model can see the current conversation, files, or tool state. If the user
+brings back feedback from another model, evaluate it against the spec under
+this same fortification posture and integrate only what actually holds up.
 
 ## Check For
 

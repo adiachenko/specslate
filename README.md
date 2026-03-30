@@ -90,18 +90,19 @@ Use these skills in order:
 
 ## Bonus Tip
 
-`spec-fortify` can also help draft a focused prompt for a cross-tool review by a model outside the current tool or session, or fold that model's feedback back into the fortification pass.
+`spec-fortify` can also facilitate a cross-tool review to get a second opinion from a model outside your current coding agent, whether from a different family or a stronger tier.
 
-Keep the review narrow and lens-specific for best results. Focus on no more than one concern at a time, such as accidental complexity, throughput, testing, etc.
+The flow is 3 steps: draft a focused review prompt, send it to the external model along with attached spec, then feed the response back into a fortification pass.
 
-When using this path, attach or paste the spec for the outside model rather than trying to restate it, and include any extra context explicitly.
-
-Examples:
+Keep the review narrow and lens-specific for best results: one concern at a time, such as accidental complexity, throughput gains, testing, etc.
 
 ```text
-$spec-fortify Draft a second-opinion review prompt focused on accidental complexity for @.specslate/260323_calendar_mcp.md
+$spec-fortify Draft a prompt to GPT-5.4 Pro to get a second opinion
+on accidental complexity found in @.specslate/260323_calendar_mcp.md
 ```
 
 ```text
-$spec-fortify Integrate this feedback into @.specslate/260323_calendar_mcp.md
+$spec-fortify Evaluate and integrate this feedback into @.specslate/260323_calendar_mcp.md
+
+[paste/attach the feedback here]
 ```
