@@ -13,6 +13,21 @@ You are reviewing a project spec after its decisions have been resolved.
 
 The user will reference a spec file. Read it in full.
 
+This skill may also be used in two indirect ways:
+
+- to draft a focused prompt for a model outside the current tool or session to
+  review the spec through a specific lens
+- to evaluate and integrate feedback produced by a model outside the current
+  tool or session back into the fortification pass
+
+When drafting such a prompt, prefer telling the user to attach or paste the
+spec itself for the other model. Include any additional context explicitly, and
+do not assume the other model can see the current conversation, files, or tool
+state unless the user plans to pass them along.
+
+Cross-tool review is optional. It is a probe, not a replacement for
+fortification.
+
 ## Fortification Posture
 
 Fortification is an integration pass, not an adversarial hunt for more work.

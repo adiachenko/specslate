@@ -1,7 +1,5 @@
 # Specslate
 
-> This workflow is **work in progress**.
-
 Skills for a lightweight spec-driven workflow to draft, refine, and strengthen the spec for a project or feature.
 
 Read the skill descriptions before using this workflow. The sections below shed light on why that matters.
@@ -59,7 +57,7 @@ Use these skills in order:
    Example:
 
    ```text
-   $spec-discover Build an MCP server for calendar management.
+   $spec-discover Build an MCP server for calendar management
    ```
 
 2. Use `spec-explore` to work through a single open decision in a drafted spec.
@@ -86,4 +84,25 @@ Use these skills in order:
    $spec-fortify @.specslate/260323_calendar_mcp.md
    ```
 
-4. When necessary, use `spec-explore` again to work through decisions added or re-opened by `spec-fortify`.
+4. You'll often need to use `spec-explore` again to work through decisions added or re-opened by `spec-fortify`, then repeat that loop until you need no more fortification passes.
+
+## Bonus Tip
+
+`spec-fortify` can also help draft a focused prompt for another model to review
+a spec, or fold that model's feedback back into the fortification pass.
+
+Keep the review narrow and lens-specific for best results. Focus on no more than
+one concern at a time, such as accidental complexity, throughput, testing, etc.
+
+When using this path, attach or paste the spec for the external model rather
+than trying to restate it, and include any extra context explicitly.
+
+Examples:
+
+```text
+$spec-fortify Write a prompt for GPT-5.4 Pro to review @.specslate/260323_calendar_mcp.md for accidental complexity
+```
+
+```text
+$spec-fortify Evaluate and integrate this GPT-5.4 Pro feedback into @.specslate/260323_calendar_mcp.md
+```
