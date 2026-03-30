@@ -2,6 +2,8 @@
 
 Skills for a lightweight spec-driven workflow to draft, refine, and strengthen the spec for a project or feature.
 
+Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
+
 Read the skill descriptions before using this workflow. The sections below shed light on why that matters.
 
 ## 🤔 Why Use It
@@ -100,9 +102,9 @@ than trying to restate it, and include any extra context explicitly.
 Examples:
 
 ```text
-$spec-fortify Write a prompt for GPT-5.4 Pro to review @.specslate/260323_calendar_mcp.md for accidental complexity
+$spec-fortify Draft a GPT-5.4 Pro review prompt focused on accidental complexity for @.specslate/260323_calendar_mcp.md
 ```
 
 ```text
-$spec-fortify Evaluate and integrate this GPT-5.4 Pro feedback into @.specslate/260323_calendar_mcp.md
+$spec-fortify Integrate this GPT-5.4 Pro feedback into @.specslate/260323_calendar_mcp.md
 ```
