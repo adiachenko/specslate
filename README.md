@@ -4,7 +4,7 @@ Skills for a lightweight spec-driven workflow to draft, refine, and strengthen t
 
 Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
 
-Read the skill descriptions before using this workflow. The sections below shed light on why that matters.
+Read the [skill descriptions](https://github.com/adiachenko/specslate/tree/main/skills) before using this workflow. They explain what each step does in more detail than the examples here.
 
 ## 🤔 Why Use It
 
@@ -35,7 +35,7 @@ One common failure mode is that the agent may not proactively move the workflow 
 ## 🛠️ Installation
 
 ```bash
-npx skills add adiachenko/specslate
+npx skills add -g adiachenko/specslate
 ```
 
 ## 🔄 Updating
