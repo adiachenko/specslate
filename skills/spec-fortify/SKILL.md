@@ -20,6 +20,12 @@ This skill may also be used in two indirect ways:
 - to evaluate and integrate feedback produced by a model outside the current
   tool or session back into the fortification pass
 
+Common user-facing cues for this path include:
+`outside review`, `second opinion review`, `external review`,
+`cross-tool review`, `outside model`, `second opinion model`,
+`external model`, and `cross-tool model`. These are examples, not exclusive
+trigger phrases.
+
 When drafting such a prompt, prefer telling the user to attach or paste the
 spec itself for the other model. Include any additional context explicitly, and
 do not assume the other model can see the current conversation, files, or tool
