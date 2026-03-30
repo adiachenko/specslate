@@ -73,8 +73,9 @@ exist" is enough — not "depends on step 2 which implements D03."
 
 ## Write the Plan
 
-Append an `## Implementation Plan` section to the spec file, after `Future
-Ideas`. Use this format:
+Append an `## Implementation Plan` section at the very end of the spec file,
+after all other sections including individual decision details. Use this
+format:
 
 ```md
 ## Implementation Plan
