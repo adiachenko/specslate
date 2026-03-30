@@ -46,14 +46,6 @@ Examples:
 
 ---
 
-## Future Ideas
-
-Items in this section are explicitly out of scope for the first implementation.
-
-- <Explicitly deferred idea that is out of scope for the first implementation>
-
----
-
 ## D01: <Title>
 
 <What needs answering before we can build this part>
@@ -61,6 +53,14 @@ Items in this section are explicitly out of scope for the first implementation.
 ## D02: <Title>
 
 ...
+
+---
+
+## Future Ideas
+
+Items in this section are explicitly out of scope for the first implementation.
+
+- <Explicitly deferred idea that is out of scope for the first implementation>
 ```
 
 ## Rules
