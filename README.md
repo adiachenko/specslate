@@ -1,6 +1,6 @@
 # Specslate
 
-Skills for a lightweight spec-driven workflow to draft, refine, and strengthen the spec for a project or feature.
+Skills for a lightweight spec-driven workflow to draft, refine, and strengthen the spec for a project or feature, then decompose it into reviewable implementation steps.
 
 Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
 
@@ -12,13 +12,11 @@ Read the skill descriptions before using this workflow. The sections below shed 
 
 Built-in planning modes in Codex and Claude Code follow a single-shot pattern: describe what you want, answer a couple of questions, get a plan, approve or restart. The AI reasons about everything at once, which produces shallow coverage of individual choices and leaves little room for real exploration.
 
-Instead, this workflow produces a document that first only maps out open questions and constraints. You then resolve each question **one at a time across separate sessions**, using the file as a persistent state machine for the process. Each decision can be explored as deeply as it deserves before it all comes together in the final comprehensive plan.
+Instead, this workflow produces a document that first only maps out open questions and constraints. You then resolve each question **one at a time across separate sessions**, using the file as a persistent state machine for the process. Each decision can be explored as deeply as it deserves, and the finished spec can then be broken into reviewable implementation steps.
 
 ### Compared to Other Spec-Driven Workflows
 
-Dedicated spec workflows typically add structure through templates, required fields, and multi-stage review gates. In practice, that rigidity works against you: it constrains the exploration to what the workflow anticipated, produces boilerplate where real thinking should be, and makes the process feel like filling out forms. This workflow strips it down to a single Markdown file and 3 helper prompts — just enough structure to serve the thinking, not replace it.
-
-It aims to stay as thin as possible. Expect it to get simpler over time, not more complex.
+Dedicated spec workflows typically add structure through templates, required fields, and multi-stage review gates. In practice, that rigidity works against you: it constrains the exploration to what the workflow anticipated, produces boilerplate where real thinking should be, and makes the process feel like filling out forms. This workflow strips it down to a single Markdown file and 5 helper prompts — just enough structure to serve the thinking, not replace it.
 
 ## 🚫 What This Is Not
 
@@ -64,10 +62,6 @@ Use these skills in order:
 
 2. Use `spec-explore` to work through a single open decision in a drafted spec.
 
-   As a decision settles, record not just the chosen direction but also the
-   assumptions, accepted risks, dependencies, and trust / ownership /
-   operational boundaries that make it safe.
-
    Example:
 
    ```text
@@ -76,10 +70,6 @@ Use these skills in order:
 
 3. Use `spec-fortify` to review the spec after the main decisions have been explored.
 
-   `spec-fortify` is an integration pass, not an adversarial search for more
-   work. It should prefer clarifying constraints or assumptions over reopening
-   decisions, and it may validly conclude that no changes are needed.
-
    Example:
 
    ```text
@@ -87,6 +77,24 @@ Use these skills in order:
    ```
 
 4. You'll often need to use `spec-explore` again to work through decisions added or re-opened by `spec-fortify`, then repeat that loop until you need no more fortification passes.
+
+5. Use `spec-plan` to decompose a fully resolved spec into an ordered sequence of vertical implementation steps appended to the spec file itself.
+
+   Example:
+
+   ```text
+   $spec-plan @.specslate/260323_calendar_mcp.md
+   ```
+
+6. Use `spec-step` to implement one plan step per invocation. Review the diff between invocations and continue.
+
+   > The skill adjusts remaining steps as needed and inserts rework steps rather than silently revisiting completed ones.
+
+   Example:
+
+   ```text
+   $spec-step @.specslate/260323_calendar_mcp.md
+   ```
 
 ## Bonus Tip
 
