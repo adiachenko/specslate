@@ -1,8 +1,14 @@
-# Specslate
+<p align="center">
+  <img src="assets/header.png" alt="Specslate header illustration of a cute satirical slot machine" width="280">
+</p>
 
-Skills for a lightweight spec-driven workflow to draft, refine, and strengthen the spec for a project or feature, then decompose it into reviewable implementation steps.
+<h1 align="center">Specslate</h1>
 
-Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
+<p align="center">
+  <em>Pragmatic spec-driven workflow for AI agents, with better odds</em>
+</p>
+
+> Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
 
 ## 🤔 Why Use It
 
