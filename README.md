@@ -5,7 +5,7 @@
 <h1 align="center">Specslate</h1>
 
 <p align="center">
-  <em>Pragmatic spec-driven workflow for AI agents, with better odds</em>
+  <em>Spec-driven workflow for AI agents, with better odds than prompt and prayer</em>
 </p>
 
 > Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
@@ -16,7 +16,7 @@
 
 Built-in planning modes in Codex and Claude Code follow a single-shot pattern: describe what you want, answer a couple of questions, get a plan, approve or restart. The AI reasons about everything at once, which produces shallow coverage of individual choices and leaves little room for real exploration.
 
-Instead, this workflow produces a document that first only maps out open questions and constraints. You then resolve each question **one at a time across separate sessions**, using the file as a persistent state machine for the process. Each decision can be explored as deeply as it deserves, and the finished spec can then be broken into reviewable implementation steps.
+Instead, this workflow produces a **single Markdown file** that first only maps out open questions and constraints. You then resolve each question **one at a time across separate sessions**, using the file as a persistent state machine for the process. Each decision can be explored as deeply as it deserves, and the finished spec is broken into ordered implementation steps that live in and are executed from that same file.
 
 ### Compared to Other Spec-Driven Workflows
 
@@ -80,9 +80,9 @@ Use these skills in order:
    $spec-fortify @.specslate/260323_calendar_mcp.md
    ```
 
-4. You'll often need to use `spec-explore` again to work through decisions added or re-opened by `spec-fortify`, then repeat that loop until you need no more fortification passes.
+   You'll sometimes need to use `spec-explore` again to work through decisions added or re-opened by `spec-fortify`, then repeat that loop until you need no more fortification passes.
 
-5. Use `spec-plan` to decompose a fully resolved spec into an ordered sequence of vertical implementation steps appended to the spec file itself.
+4. Use `spec-plan` to decompose a fully resolved spec into an ordered sequence of vertical implementation steps appended to the spec file itself.
 
    Example:
 
@@ -90,7 +90,7 @@ Use these skills in order:
    $spec-plan @.specslate/260323_calendar_mcp.md
    ```
 
-6. Use `spec-step` to implement one plan step per invocation. Review the diff between invocations and continue.
+5. Use `spec-step` to implement one plan step per invocation. Review the diff between invocations and continue.
 
    > The skill adjusts remaining steps as needed and inserts rework steps rather than silently revisiting completed ones.
 
