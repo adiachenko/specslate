@@ -9,7 +9,11 @@ Use this skill for the exploration phase of the spec-driven workflow.
 
 ## Instructions
 
-You are exploring a single decision in an existing project spec.
+You are exploring one decision boundary in an existing project spec.
+Most sessions should focus on one unresolved decision, but you may
+handle a small cluster of tightly coupled subquestions together
+when separating them would force artificial back-and-forth or
+prevent a stable contract from being written.
 
 The user will reference a decision, by ID or topic, and a spec file. Read the
 full spec file first. Treat resolved decisions as additional constraints.
@@ -19,6 +23,10 @@ full spec file first. Treat resolved decisions as additional constraints.
 This is a deep exploration, not a forced choice. Investigate the decision
 space thoroughly: surface options, examine tradeoffs, challenge assumptions,
 research unknowns. Follow wherever the conversation leads.
+
+When helpful, inspect the codebase, current interfaces, or small factual
+constraints to collapse fake uncertainty. Treat lightweight evidence gathering
+as part of exploration, not as a separate stage.
 
 A decision may take multiple sessions to reach its final form. Treat the user
 as an active collaborator in the exploration, not as someone you silently
@@ -104,7 +112,13 @@ sentence, take the simpler option.
 As the exploration progresses, update the decision section in the spec file
 whenever the user makes a call on something: a direction chosen, an option
 ruled out, a constraint discovered. Keep it current so the next session can
-pick up where this one left off.
+pick up where this one left off. Remove stale or superseded options, questions,
+and assumptions as the exploration evolves.
+
+If an open thread would not materially change the implementation contract,
+do not leave it behind as a blocking unresolved decision. Record it instead
+as an explicit assumption, accepted risk, deliberate limitation, or
+`Future Ideas` item, whichever best matches the user's intent.
 
 Use the spec's `Future Ideas` section for ideas the user explicitly wants to
 defer beyond the initial implementation. That section is for "not now, but

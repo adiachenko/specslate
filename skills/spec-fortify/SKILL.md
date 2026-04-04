@@ -13,6 +13,12 @@ You are reviewing a project spec after its decisions have been resolved.
 
 The user will reference a spec file. Read it in full.
 
+If the work is not obviously greenfield, do a shallow codebase scan of
+the parts most likely to constrain the spec before proposing changes.
+Look for existing interfaces, migrations, deployment assumptions, auth
+or trust boundaries, and operator-visible behavior. This is a reality
+check, not a redesign pass.
+
 ## Fortification Posture
 
 Fortification is an integration pass, not an adversarial hunt for more work.
@@ -25,6 +31,10 @@ Prefer the smallest change that resolves a real issue:
 3. add a new pending decision only when implementation would otherwise proceed
    in materially different ways
 4. reopen a resolved decision only as a last resort
+
+Do not turn a non-blocking unknown into a pending decision just because it is
+still interesting. If different outcomes would not materially change what
+gets built now, clarify the boundary and move on.
 
 Reopen a decision only when at least one of these is true:
 
@@ -92,16 +102,27 @@ this same fortification posture and integrate only what actually holds up.
 
 ## Update the Spec
 
-Don't add review notes or commentary to the spec file. If the review surfaces
-something actionable, apply it directly to the spec with the user's approval.
+Don't add review notes or commentary to the spec file.
+
+If the review surfaces a clarification-only change that preserves the meaning
+of the current decisions, apply it directly to the spec and report it briefly.
+
+Require the user's approval before making any change that alters decision
+state or meaning.
+
 It is valid to make no changes if the spec is already coherent enough to
 implement safely.
 
-Actionable changes include:
+Clarification-only changes that may be applied directly include:
 
-- adding or clarifying a constraint, explicit assumption, or accepted-risk
-  boundary
+- adding or clarifying an explicit assumption
+- adding or clarifying an accepted-risk boundary
 - tightening verification requirements
+- tightening wording to remove ambiguity without changing the resolved contract
+- moving explicitly deferred nice-to-haves into `Future Ideas`
+
+Changes that require the user's approval include:
+
 - adding a new pending decision
 - reopening a resolved decision
-- moving explicitly deferred nice-to-haves into `Future Ideas`
+- changing the meaning of a settled contract or constraint

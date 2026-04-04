@@ -15,6 +15,12 @@ that need to be made, not to make them.
 The user will describe what they want to build after referencing this skill.
 From their description, produce a spec file and save it to disk.
 
+If the project already has a codebase, inspect it before drafting the spec.
+Use the actual current architecture, conventions, integration points, and
+constraints to decide what is truly still open. Do not create greenfield
+decisions for areas the existing system has already fixed unless the user
+is explicitly asking to revisit them.
+
 ## File Convention
 
 Save as: `.specslate/YYMMDD_<topic_slug>.md` relative to the project root, where
@@ -66,7 +72,8 @@ Items in this section are explicitly out of scope for the first implementation.
 ## Rules
 
 - If there is no real tradeoff and the requirement is explicit and non-negotiable, it is a constraint.
-- If a detail could plausibly be implemented in more than one valid way, it is a decision.
+- If a detail could plausibly be implemented in more than one valid way and those paths would materially change the contract, integration boundary, risk profile, or implementation shape, it is a decision.
+- If multiple valid implementations would leave the same contract and overall shape of work intact, do not promote it to the decisions table.
 - If something is intentionally out of scope for the first implementation but worth remembering, put it in `Future Ideas`, not in `Constraints`.
 - Suggested contracts, examples, and likely designs should be preserved as decision input when they inform an unresolved choice.
 - Do not infer additional hard requirements from examples or suggested contracts beyond what is directly stated.
@@ -75,3 +82,4 @@ Items in this section are explicitly out of scope for the first implementation.
 - Name likely options to frame the tradeoff, but do not recommend or commit to one.
 - Keep `Future Ideas` lightweight. It is a parking lot for explicit deferments that are out of scope for the first implementation, not a second backlog of unresolved requirements.
 - Before finalizing, audit each constraint: if it depends on interpretation rather than direct user intent, move it to `Decisions` and keep the motivating detail if it remains relevant.
+- Before finalizing, audit each proposed decision: if different outcomes would not materially change the initial implementation contract, merge that detail back into surrounding decision text or leave it for implementation rather than giving it its own row in the decisions table.

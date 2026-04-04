@@ -98,13 +98,43 @@ plan that describes the specific rework needed, placed before the next step that
 depends on it. Report this to the user. The next `spec-step` invocation picks
 up the rework, keeping each change reviewable on its own.
 
-## Decision Contradictions
+## Implementation Contradictions
 
-If implementation reveals that a resolved decision in the spec is wrong or
-impractical, do not silently deviate and do not block on it. Proceed with the
-pragmatic choice that keeps the step deliverable, but report the contradiction
-explicitly: what the spec says, what you did instead, and why. Leave it to the
-user to decide whether the spec needs updating.
+If implementation reveals that a resolved decision in the spec is wrong,
+incomplete, or impractical, do not silently deviate and do not block on it.
+Proceed with the pragmatic choice that keeps the current step deliverable.
+
+Record the contradiction in the spec so it is not lost across sessions, but do
+not automatically reopen the decision or convert it back into active
+exploration.
+
+If the contradiction does not materially change the spec's user-visible
+contract, trust boundary, ownership boundary, or accepted-risk posture, add a
+brief note under a dedicated `## Implementation Contradictions` section and
+continue. Use this format:
+
+```md
+## Implementation Contradictions
+
+- **D04 / Step N: <Short title>**
+  <Brief description of what the spec said, what was implemented instead, and
+  why the divergence happened.>
+
+- **D07 / Step N: <Short title>**
+  <Brief description of what the spec said, what was implemented instead, and
+  why the divergence happened.>
+  Follow-up: <reconciliation step added to the implementation plan, if needed>
+```
+
+If the contradiction does materially affect the spec's meaning or would make
+future steps plan against something false, insert a new unchecked
+reconciliation/rework step into the implementation plan before any later step
+that depends on the outdated assumption. Keep the original resolved decision
+intact until that reconciliation step is handled explicitly.
+
+Always report the contradiction clearly: what the spec said, what was done
+instead, why, what was recorded in the spec, and whether a follow-up plan step
+was added.
 
 ## Report
 

@@ -12,6 +12,11 @@ Use this skill to produce an implementation plan from a fortified spec.
 The user will reference a spec file. Read it in full, including resolved
 decisions, constraints, and future ideas.
 
+If an unresolved item appears non-blocking because different outcomes would not
+materially change the implementation contract, tell the user the spec likely
+needs cleanup before planning: convert that item into an explicit assumption,
+accepted risk, limitation, or `Future Ideas` entry instead of planning around it.
+
 Before planning, check the decisions table. If any decision is not marked ✅,
 stop and tell the user which decisions are still unresolved. Do not produce a
 plan against an incomplete spec — the plan would have to guess at unresolved
