@@ -10,6 +10,14 @@
 
 > Designed for decision-heavy work where early choices shape the outcome, such as greenfield projects, major features, or architectural changes with real tradeoffs. Not intended for straightforward, execution-ready tasks where you mostly just need a fast plan and momentum.
 
+| Skill               | Role                                                                                                                                                |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`spec-discover`** | Scopes the project: maps what decisions need to be made, without making them. Saves a spec file to `.specslate/`.                                   |
+| **`spec-explore`**  | Digs into one decision at a time: surfaces options, tradeoffs, and assumptions. You drive the direction.                                            |
+| **`spec-fortify`**  | Reviews the completed spec for contradictions, gaps, and accidental complexity. Can also draft prompts for a second opinion from an external model. |
+| **`spec-plan`**     | Decomposes the resolved spec into an ordered sequence of implementation steps, appended to the spec file.                                           |
+| **`spec-step`**     | Implements one step per invocation. You review the diff between runs.                                                                               |
+
 ## 🤔 Why Use It
 
 ### Compared to Planning Mode
